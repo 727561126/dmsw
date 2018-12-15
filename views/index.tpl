@@ -12,13 +12,13 @@
 
      <!-- global stylesheets -->
      <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-     <link rel="stylesheet" href="css/font-icon-style.css">
-     <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+     <link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="/static/css/font-icon-style.css">
+     <link rel="stylesheet" href="/static/css/style.default.css" id="theme-stylesheet">
 
      <!-- Core stylesheets -->
-     <link rel="stylesheet" href="css/pages/login.css">
+     <link rel="stylesheet" href="/static/css/pages/login.css">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
           <div class="row">
             <div class="col-md-12 ">
                 <div class="contact-h-cont">
-                  <h3 class="text-center"><img src="img/logo.png" class="img-fluid" alt=""></h3><br>
+                  <h3 class="text-center"><img src="/static/img/logo.png" class="img-fluid" alt=""></h3><br>
                   <form>
                     <div class="form-group">
                       <label for="username">Username</label>
@@ -47,8 +47,8 @@
       </section>
 
     <!--Global Javascript -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/tether.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/staticjs/jquery.min.js"></script>
+    <script src="/static/js/tether.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
 </body>
 </html>
