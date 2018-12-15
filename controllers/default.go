@@ -23,6 +23,6 @@ func (c *MainController) Index() {
 }
 
 func (c *MainController) Login() {
-	c.TplName = "main/main.tpl"
+	c.TplName = "main/main.html"
 	c.Layout = "index.tpl"
 }
