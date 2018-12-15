@@ -5,7 +5,7 @@
             <div class="col-md-12 ">
                 <div class="contact-h-cont">
                   <h3 class="text-center"><img src="/static/img/logo.png" class="img-fluid" alt=""></h3><br>
-                  <form>
+                  <form action="/login" method="post">
                     <div class="form-group">
                       <label for="username">Username</label>
                       <input type="text" class="form-control" id="username" placeholder="Enter Username">

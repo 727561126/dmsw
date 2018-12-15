@@ -15,3 +15,6 @@ func (c *MainController) Get() {
 	c.Layout = "index.tpl"
 
 }
+func (c *MainController) Login() {
+	c.TplName = "main/main.html"
+}
