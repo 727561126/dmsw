@@ -1,10 +1,13 @@
-package main
+package util
 
 import (
 	"fmt"
 	"github.com/docker/docker/api/types"
+	"github.com/docker/docker/api/types/container"
 	"github.com/docker/docker/client"
 	"golang.org/x/net/context"
+	"io"
+	"os"
 )
 
 type DockerAction interface {
@@ -37,6 +40,28 @@ func (mydocker MyDocker) docker_run_list(cli *client.Client, ctx context.Context
 	return containers, nil
 
 }
+
+func (mydocker MyDocker) docker_start(cli *client.Client, ctx context.Context, imageName string) {
+	out, err := cli.ImagePull(ctx, imageName, types.ImagePullOptions{})
+	if err != nil {
+		panic(err)
+	}
+	io.Copy(os.Stdout, out)
+	resp, err := cli.ContainerCreate(ctx, &container.Config{
+		Image: imageName,
+	}, nil, nil, "")
+	if err != nil {
+		panic(err)
+	}
+	if err := cli.ContainerStart(ctx, resp.ID, types.ContainerStartOptions{}); err != nil {
+		panic(err)
+	}
+	NewMyError("启动成功")
+}
+func (mydocker MyDocker) docker_stop(cli *client.Client, ctx context.Context, ID string) {
+
+}
+
 func main() {
 	ctx := context.Background()
 	cli, err := get_docker()
