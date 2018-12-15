@@ -24,7 +24,7 @@
 <body>
     {{.LayoutContent}}
     <!--Global Javascript -->
-    <script src="/staticjs/jquery.min.js"></script>
+    <script src="/static/js/jquery.min.js"></script>
     <script src="/static/js/tether.min.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
 </body>
